@@ -1,0 +1,3 @@
+pod 'Fabric'
+pod 'TwitterKit'
+pod 'TwitterCore'

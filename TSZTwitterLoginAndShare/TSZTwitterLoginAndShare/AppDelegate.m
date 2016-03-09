@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 
+#import <Fabric/Fabric.h>
+#import <TwitterKit/TwitterKit.h>
+
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +20,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+//    [[ Twitter  sharedInstance ]  startWithConsumerKey : @"An1hPXM9IkRkN2RzUyOwyd1OD"  consumerSecret : @"YF7fYMKTrczfzpg9sZJQq3hv49tPXqMcZZR1P8s7SOmi3NLjpc" ];
+    
+     [Fabric with:@[[ Twitter  class] ]];
+    
     return YES;
 }
 
@@ -41,5 +49,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
 
 @end
