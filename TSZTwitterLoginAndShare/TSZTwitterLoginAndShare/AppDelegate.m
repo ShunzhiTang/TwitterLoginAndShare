@@ -50,6 +50,26 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+//- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
+//    
+//    if (!url) {  return NO; }
+//    NSString *URLString = [url absoluteString];
+//    NSLog(@"URLString = %@",URLString);
+//    //[[NSUserDefaults standardUserDefaults] setObject:URLString forKey:@"url"];
+//    //[[NSUserDefaults standardUserDefaults] synchronize];
+//    
+//    return YES;
+//}
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    if (!url) {  return NO; }
+    NSString *URLString = [url absoluteString];
+    NSLog(@"URLStrin12312312g = %@",URLString);
+    
+    //[[NSUserDefaults standardUserDefaults] setObject:URLString forKey:@"url"];
+    //[[NSUserDefaults standardUserDefaults] synchronize];
+    
+    return YES;
+}
 
 @end

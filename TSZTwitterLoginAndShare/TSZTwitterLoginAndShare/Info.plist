@@ -18,28 +18,40 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.mobao.TSZTwitterLoginAndShare</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>LinkedinLoginDemo</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-    
-    <key>Fabric</key>
-    <dict>
-        <key>APIKey</key>
-        <string>d24145d010db4e92f08e086de9e505deb156f61e</string>
-        <key>Kits</key>
-        <array>
-            <dict>
-                <key>KitInfo</key>
-                <dict>
-                    <key>consumerKey</key>
-                    <string>An1hPXM9IkRkN2RzUyOwyd1OD</string>
-                    <key>consumerSecret</key>
-                    <string>YF7fYMKTrczfzpg9sZJQq3hv49tPXqMcZZR1P8s7SOmi3NLjpc</string>
-                </dict>
-                <key>KitName</key>
-                <string>Twitter</string>
-            </dict>
-        </array>
-    </dict>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>d24145d010db4e92f08e086de9e505deb156f61e</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict>
+					<key>consumerKey</key>
+					<string>An1hPXM9IkRkN2RzUyOwyd1OD</string>
+					<key>consumerSecret</key>
+					<string>YF7fYMKTrczfzpg9sZJQq3hv49tPXqMcZZR1P8s7SOmi3NLjpc</string>
+				</dict>
+				<key>KitName</key>
+				<string>Twitter</string>
+			</dict>
+		</array>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
@@ -62,6 +74,10 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>LinkedinLoginDemo</string>
 	</array>
 </dict>
 </plist>

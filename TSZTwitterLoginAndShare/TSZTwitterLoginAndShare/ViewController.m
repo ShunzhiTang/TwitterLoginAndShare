@@ -69,27 +69,29 @@
 
 - (IBAction)clickLoadTweet:(id)sender {
     
-   NSString *userID = [Twitter sharedInstance].sessionStore.session.userID;
-    
-    NSLog(@"%@" , userID);
-    
-    TWTRComposer *composer = [[TWTRComposer alloc] init];
-    
-    [composer setText:@"just setting up my Fabric"];
-    [composer setImage:[UIImage imageNamed:@"chile"]];
-    
-    // Called from a UIViewController
-    [composer showFromViewController:self completion:^(TWTRComposerResult result) {
-        
 
-        if (result == TWTRComposerResultCancelled) {
-            
-            NSLog(@"Tweet composition cancelled");
-        }
-        else {
-            NSLog(@"Sending Tweet!");
-        }
-    }];
+    
+//   NSString *userID = [Twitter sharedInstance].sessionStore.session.userID;
+//    
+//    NSLog(@"%@" , userID);
+//    
+//    TWTRComposer *composer = [[TWTRComposer alloc] init];
+//    
+//    [composer setText:@"just setting up my Fabric"];
+//    [composer setImage:[UIImage imageNamed:@"chile"]];
+//    
+//    // Called from a UIViewController
+//    [composer showFromViewController:self completion:^(TWTRComposerResult result) {
+//        
+//
+//        if (result == TWTRComposerResultCancelled) {
+//            
+//            NSLog(@"Tweet composition cancelled");
+//        }
+//        else {
+//            NSLog(@"Sending Tweet!");
+//        }
+//    }];
     
     
     /*
