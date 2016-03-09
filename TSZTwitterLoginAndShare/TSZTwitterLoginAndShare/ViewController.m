@@ -10,7 +10,7 @@
 
 #import <TwitterKit/TwitterKit.h>
 
-@interface ViewController ()
+@interface ViewController ()<TWTRComposerViewControllerDelegate>
 
 @property (nonatomic , strong) NSString *userID;
 
@@ -50,6 +50,8 @@
 //                                                           delegate:nil
 //                                                  cancelButtonTitle:@"OK"
 //                                                  otherButtonTitles:nil];
+            
+            
 //            [alert show];
         } else {
             NSLog(@"Login error: %@", [error localizedDescription]);
@@ -59,11 +61,8 @@
     // TODO: Change where the log in button is positioned in your view
     logInButton.center = self.view.center;
     [self.view addSubview:logInButton];
+
     
-
-
-
-
 }
 
 
@@ -73,6 +72,7 @@
    NSString *userID = [Twitter sharedInstance].sessionStore.session.userID;
     
     NSLog(@"%@" , userID);
+    
     TWTRComposer *composer = [[TWTRComposer alloc] init];
     
     [composer setText:@"just setting up my Fabric"];
@@ -90,8 +90,26 @@
             NSLog(@"Sending Tweet!");
         }
     }];
-
-
+    
+    
+    /*
+        发送信息
+     */
+//
+//    TWTRSession *session = [Twitter sharedInstance].sessionStore.session;
+//    
+//    // User generated image
+//    UIImage *image = [UIImage imageNamed:@"chile"];
+//    
+//    // Create the card and composer
+//    TWTRCardConfiguration *card = [TWTRCardConfiguration appCardConfigurationWithPromoImage:image iPhoneAppID:@"12121" iPadAppID:nil googlePlayAppID:nil];
+//    TWTRComposerViewController *composer = [[TWTRComposerViewController alloc] initWithUserID:session.userID cardConfiguration:card];
+//    
+//    // Optionally set yourself as the delegate
+//    composer.delegate = self;
+//    
+//    // Show the view controller
+//    [self presentViewController:composer animated:YES completion:nil];
 }
 
 
